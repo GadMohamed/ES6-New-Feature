@@ -101,8 +101,79 @@ rest(1)        //[] Empty Arry
 
 var spread = [1,2,3,5];
 console.log(Math.max(...spread)); // 5  
-
+console.log(Math.max(..."125487663")); // 8 
 // max function  not accept arry but number separated by , spread operator do this with function
+
+//object literal 
+//es5
+function gad (name , age){
+    return {
+        name : name,
+        age  : age
+    }
+}
+
+var obj = gad("ali" , 15);
+console.log(obj) // {name:"ali" , age:15}
+console.log(typeof(obj)); // object
+
+//ES6
+
+function gad (name , age){
+    return {
+        name,
+        age
+    }
+}
+
+var obj = gad("ali" , 15);
+console.log(obj) // {name:"ali" , age:15}
+console.log(typeof(obj)); // object
+
+var dynamic = "dynamic";
+var price  = 5;
+var product = {
+    [dynamic] : price
+} 
+console.log(product) // {dynamic:5}
+
+
+
+// classes 
+class Task{
+    showId()
+    {
+      console.log(8);
+    }
+}
+let task = new Task();
+task.showId(); // 8
+
+//with constructor
+class Task1{
+    constructor(){
+        console.log("hi");
+    }
+    showId()
+    {
+      console.log(8);
+    }
+}
+let task1 = new Task1(); // hi
+task1.showId(); // 8
+
+
+// Module 
+
+//import { productName , productId } from 'prac2.js';
+//console.log(`${productName} has id : ${productId}`);
+
+
+
+
+
+
+
 
 
 
